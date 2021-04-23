@@ -1,0 +1,40 @@
+{
+    "racas":{
+        "samariano":{
+            "nome": "Samariano",
+            "key": "samariano",
+            "diferencial":"Proficiência Militar: Os Samarianos possuem um grande histórico de guerra, sendo a raça mais antiga em batalhas por toda Samaria. Por conta disso seus corpos são acostumados com o combate e com a aptidão de luta, causando assim +15 de Dano Físico, por conta deste condicionamento melhorado.\nGrandes Sociedades: Os Samarianos estão sempre envoltos em grandes sociedades. Por conta disso, é muito comum você ver um Samariano levando um papo mais... Carismático com alguém, buscando sempre um jeito mais fácil pra lidar com as coisas. É o que acontece quando se acostuma a lidar com gente. Bônus: +3 no dado de Convencimento."
+        },
+        "elfo": "Elfos",
+        "fadas": "Fadas",
+        "anoes": "Anões",
+        "submundanos": "Submundanos",
+        "draconatos": "Draconatos",
+        "imortais": "Imortais",
+        "corrompidos": "Corrompidos",
+        "aronianos": "Aronianos",
+        "fantasmas": "Fantasmas",
+        "ganaltianos": "Ganaltianos"
+    },
+    "reinos":[
+        "Reino de Dawhan",
+        "Reino de Krieger",
+        "Vale dos Imortais",
+        "Reino da Morte",
+        "Arquipélago de Drakir",
+        "Império de Aronian",
+        " Reino de Vaa'nalt"
+    ],
+    "pericias": {
+        "fisicas":{
+        "espada-longa":{
+            "nome": "Espada Longa",
+            "desc": "+ Sem técnica — Ao nível um é possível empunhar a espada de modo satisfatório, mas ainda sente a necessidade da mão de suporte no cabo.\n+ Maestria com uma mão (nível 5) — Os golpes passam a ser mais ágeis, como as espadas normais, mesmo com seu tamanho um pouco mais longo e o peso excessivo."
+        },
+        "espada-duas-maos":{
+            "nome": "Espada de Duas Mãos",
+            "desc": "+ Sem técnica — Ao nível um é possível empunhar a espada de modo satisfatório, mas golpes fortes podem derrubar a espada. O peso da espada dificulta os movimentos.\n+ Maestria em duas mãos (nível 5) — Os golpes podem desequilibrar o oponente. A chance de deixar a arma cair é inexistente, mas não conseguir atacar é uma possibilidade."
+        }
+        }
+    }
+}

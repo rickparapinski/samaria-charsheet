@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>As Cronicas de Samaria - Ficha Rapida</title>
+
+</head>
+<body>
+    <div id="app">
+        <div class="form">
+            <form @submit="sumAttrib">
+                <div class="form-box">
+                <label for="name">Nome do personagem</label>
+                <input type="text" name="name" v-model="chardata.charName" id="" class="form-field">
+                </div>
+                <div class="form-box">
+                    <label for="idade">Idade</label>
+                    <input type="text" name="idade" v-model="chardata.idade" id="" class="form-field" placeholder="103 anos">         
+                </div>
+                <div class="form-box">
+                    <div class="box">
+                        <label for="reino">Reino</label>
+                        <select name="reinos" id=""  v-model="chardata.reino">
+                            <option disabled>Selecione um reino</option>
+                            <option v-for="reino in info.reinos" >{{reino}}</option>
+                        </select>
+                       </div>        
+                </div>
+                <div class="form-box">
+                    <label for="racas">Raça escolhida</label>
+                   <div class="box">
+                    <select name="racas" id="" v-model="chardata.racaName" @change="onChange($event.target.value)">
+                        <option disabled>Selecione uma raça</option>
+                        <option v-for="raca in info.racas" :value="raca.key" >{{raca.nome}}</option>
+                    </select>
+                   </div>
+                   </div>
+                   <div class="form-box">
+                    <label for="difRacial">Diferenças raciais</label>
+                    <textarea  name="difRacial" v-model="chardata.difRacial" id=""  rows="4" cols="50" ></textarea>
+                    </div>
+                   <div class="form-box">
+                    <div class="atributos">
+                        <div class="atributo">
+                            <label for="agilidade">Agilidade</label>
+                        <input type="number" id="agilidade" name="agilidade" min="1" max="5" v-model.number="chardata.atributos.agilidade">
+                        </div>
+                        <div class="atributo">
+                            <label for="forca">Força</label>
+                        <input type="number" id="forca" name="forca" min="1" max="5" v-model.number="chardata.atributos.forca">
+                        </div>
+                        <div class="atributo">
+                            <label for="destreza">Destreza</label>
+                        <input type="number" id="destreza" name="destreza" min="0" max="5" v-model.number="chardata.atributos.destreza">
+                        </div>
+                        <div class="atributo">
+                            <label for="carisma">Carisma</label>
+                        <input type="number" id="carisma" name="carisma" min="0" max="5" v-model.number="chardata.atributos.carisma">
+                        </div>
+                        <div class="atributo">
+                            <label for="resistencia">Resistência</label>
+                        <input type="number" id="resistencia" name="resistencia" min="0" max="5" v-model.number="chardata.atributos.resistencia">
+                        </div>
+                        <div class="atributo">
+                            <label for="inteligencia">Inteligência</label>
+                        <input type="number" id="inteligencia" name="inteligencia" min="0" max="5" v-model.number="chardata.atributos.inteligencia">
+                        </div>
+                        <p style="margin: 10px;text-align: center; font-weight: bold;" :class="{red : limiteAtributos}">{{chardata.atributos.atributosTotal}}/{{limiteAtributo}} pontos disponiveis</p>
+                    </div>
+                   </div>
+                   <div class="form-box">
+                    <label for="cargo">Cargo escolhido</label>
+                    <input type="text" name="name" v-model="chardata.cargo" id="" class="form-field">
+                    <p>Visite a lista de cargos <a href="https://samaria.forumeiros.com/t38-recomendado-cargos"></a></p>
+                    </div>
+
+                    <div class="form-box">
+                        <label for="pericias">Escolha suas três habilidades iniciais</label>
+                       <div class="box">
+                        <select name="pericias" id="pericia1" v-model="chardata.pericia1">
+                            <option disabled>Selecione uma raça</option>
+                            <option v-for="(name, prop) in info.pericias.fisicas" >{{name.nome}}</option>
+                        </select>
+                        <div style="margin: 5px;"></div>
+                        <select name="pericias" id="pericia2" v-model="chardata.pericia2">
+                            <option disabled>Selecione uma raça</option>
+                            <option v-for="(name, prop) in info.pericias.fisicas" >{{name.nome}}</option>
+                        </select>
+                        <div style="margin: 5px;"></div>
+                        <select name="pericias" id="pericia3" v-model="chardata.pericia3">
+                            <option disabled>Selecione uma raça</option>
+                            <option v-for="(name, prop) in info.pericias.fisicas" >{{name.nome}}</option>
+                        </select>
+                       </div>
+                       </div>      
+                       <div class="form-box">
+                        <label for="armas">Preencha suas armas iniciais</label>
+                        <textarea  name="name" v-model="chardata.armasIniciais" id=""  rows="4" cols="50"></textarea>
+                        <p>Visite a lista de cargos <a href="https://samaria.forumeiros.com/t38-recomendado-cargos"></a></p>
+                        </div>
+                        <div class="form-box">
+                            <label for="historia">Breve história (se desejar ou caso seja um caso obrigatório)s</label>
+                            <textarea  name="historia" v-model="chardata.historia" id=""  rows="4" cols="50"></textarea>
+                            </div>
+            </form>
+            </div>       
+        <div class="result">
+            <pre>
+<code>
+[b]Seu nome:[/b] {{chardata.charName}}
+[b]Atributos -[/b]
+Agilidade: {{chardata.atributos.agilidade}}
+Força: {{chardata.atributos.forca}}
+Destreza: {{chardata.atributos.destreza}}
+Carisma: {{chardata.atributos.carisma}}
+Resistência: {{chardata.atributos.resistencia}}
+Inteligência:{{chardata.atributos.inteligencia}}
+[b]Sua idade:[/b]{{chardata.idade}}
+[b]Seu Reino:[/b]{{chardata.reino}}
+[b]Sua raça:[/b] {{chardata.racaName}}
+[b]Seu cargo:[/b] {{chardata.cargo}}
+[b]Perícias Iniciais (são 3, apenas os nomes delas, sem descrição ou nome do nível):[/b]{{chardata.pericia1}}, {{chardata.pericia2}}, {{chardata.pericia3}}
+[b]Itens Iniciais (são 2 de acordo com o cargo, vide Itens Iniciais, com descrição completa):[/b]{{chardata.armasIniciais}}
+[b]Breve história (se desejar ou caso seja um caso obrigatório): [/b]
+[b]Diferenças raciais (em caso de submundano, para as vantagens iniciais;  para imortal/corrompido, local da centelha):[/b] {{chardata.difRacial}}
+</code>            </pre>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
