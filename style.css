@@ -102,3 +102,8 @@ pre {
 .red {
   color: red;
 }
+
+textarea {
+  color: #f2f2f2;
+  font-size: 12px;
+}

@@ -15,7 +15,7 @@
             <form @submit="sumAttrib">
                 <div class="form-box">
                 <label for="name">Nome do personagem</label>
-                <input type="text" name="name" v-model="chardata.charName" id="" class="form-field">
+                <input type="text" name="name" v-model="chardata.charName" id="" class="form-field" placeholder="Mahoro">
                 </div>
                 <div class="form-box">
                     <label for="idade">Idade</label>
@@ -75,7 +75,7 @@
                    <div class="form-box">
                     <label for="cargo">Cargo escolhido</label>
                     <input type="text" name="name" v-model="chardata.cargo" id="" class="form-field">
-                    <p>Visite a lista de cargos <a href="https://samaria.forumeiros.com/t38-recomendado-cargos"></a></p>
+                    <p>Visite a lista de cargos <a href="https://samaria.forumeiros.com/t38-recomendado-cargos">aqui</a></p>
                     </div>
 
                     <div class="form-box">
@@ -100,7 +100,7 @@
                        <div class="form-box">
                         <label for="armas">Preencha suas armas iniciais</label>
                         <textarea  name="name" v-model="chardata.armasIniciais" id=""  rows="4" cols="50"></textarea>
-                        <p>Visite a lista de cargos <a href="https://samaria.forumeiros.com/t38-recomendado-cargos"></a></p>
+                        <p>Visite a lista de armas <a href="https://samaria.forumeiros.com/t33-obrigatorio-armas-iniciais">aqui.</a></p>
                         </div>
                         <div class="form-box">
                             <label for="historia">Breve história (se desejar ou caso seja um caso obrigatório)s</label>
@@ -112,6 +112,7 @@
             <pre>
 <code>
 [b]Seu nome:[/b] {{chardata.charName}}
+
 [b]Atributos -[/b]
 Agilidade: {{chardata.atributos.agilidade}}
 Força: {{chardata.atributos.forca}}
@@ -119,13 +120,18 @@ Destreza: {{chardata.atributos.destreza}}
 Carisma: {{chardata.atributos.carisma}}
 Resistência: {{chardata.atributos.resistencia}}
 Inteligência:{{chardata.atributos.inteligencia}}
+
 [b]Sua idade:[/b]{{chardata.idade}}
 [b]Seu Reino:[/b]{{chardata.reino}}
 [b]Sua raça:[/b] {{chardata.racaName}}
 [b]Seu cargo:[/b] {{chardata.cargo}}
+
 [b]Perícias Iniciais (são 3, apenas os nomes delas, sem descrição ou nome do nível):[/b]{{chardata.pericia1}}, {{chardata.pericia2}}, {{chardata.pericia3}}
-[b]Itens Iniciais (são 2 de acordo com o cargo, vide Itens Iniciais, com descrição completa):[/b]{{chardata.armasIniciais}}
-[b]Breve história (se desejar ou caso seja um caso obrigatório): [/b]
+
+[b]Itens Iniciais (são 2 de acordo com o cargo, vide Itens Iniciais, com descrição completa):[/b] {{chardata.armasIniciais}}
+
+[b]Breve história (se desejar ou caso seja um caso obrigatório): [/b]  {{chardata.historia}}
+
 [b]Diferenças raciais (em caso de submundano, para as vantagens iniciais;  para imortal/corrompido, local da centelha):[/b] {{chardata.difRacial}}
 </code>            </pre>
         </div>

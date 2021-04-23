@@ -1,11 +1,15 @@
 {
     "racas":{
         "samariano":{
-            "nome": "Samariano",
+            "nome": "Samarianos",
             "key": "samariano",
             "diferencial":"Proficiência Militar: Os Samarianos possuem um grande histórico de guerra, sendo a raça mais antiga em batalhas por toda Samaria. Por conta disso seus corpos são acostumados com o combate e com a aptidão de luta, causando assim +15 de Dano Físico, por conta deste condicionamento melhorado.\nGrandes Sociedades: Os Samarianos estão sempre envoltos em grandes sociedades. Por conta disso, é muito comum você ver um Samariano levando um papo mais... Carismático com alguém, buscando sempre um jeito mais fácil pra lidar com as coisas. É o que acontece quando se acostuma a lidar com gente. Bônus: +3 no dado de Convencimento."
         },
-        "elfo": "Elfos",
+        "elfos": {
+            "nome": "Elfos",
+            "key": "elfos",
+            "diferencial": "Leveza élfica: Os elfos possuem uma leveza única. Há quem diga que se você pega um elfo no colo, sente todo o peso de seu corpo. Mas se um elfo pula, demora para cair ao chão, como uma pena. Obviamente um mito, mas a realidade é que os elfos são donos de grandiosa agilidade em seus movimentos, e por isso são praticamente os alvos mais chatos pra um arqueiro. +3 de modificador em Esquiva.\nAudição élfica: Existem caçadores de elfos por aí. Cheios de ódio por conta da distinção da raça. E qual distinção maior do que a orelha pontuda? Porém, aquela orelha pontuda ajuda a ouvir coisas que, naturalmente, outras raças não ouviriam. Como até mesmo o retesar de uma corda de arco, a metros e metros de distância. +3 de modificador em Percepção."
+        },
         "fadas": "Fadas",
         "anoes": "Anões",
         "submundanos": "Submundanos",

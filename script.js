@@ -36,15 +36,19 @@ methods: {
         this.chardata.atributos.atributosTotal  = this.chardata.atributos.agilidade + this.chardata.atributos.forca + this.chardata.atributos.destreza +  this.chardata.atributos.carisma + this.chardata.atributos.resistencia +this.chardata.atributos.inteligencia
 },
 onChange(value){
-    
-
     switch(value){
         case 'samariano':
+            console.log(value)
             this.chardata.difRacial = this.info.racas[value].diferencial
             this.limiteAtributo = 23
             this.sumAttrib()
-
-
+        break;
+        case 'elfos':
+            console.log(value)
+            this.chardata.difRacial = this.info.racas[value].diferencial
+            this.limiteAtributo = 23
+            this.sumAttrib()
+        break;
     }
 
     
