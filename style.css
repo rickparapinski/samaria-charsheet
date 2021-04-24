@@ -36,6 +36,7 @@ label {
 }
 
 .result {
+  width: 40%;
   background-color: #151515;
   margin-left: 5px;
 }
