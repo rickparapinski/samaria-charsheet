@@ -10,7 +10,11 @@
             "key": "elfos",
             "diferencial": "Leveza élfica: Os elfos possuem uma leveza única. Há quem diga que se você pega um elfo no colo, sente todo o peso de seu corpo. Mas se um elfo pula, demora para cair ao chão, como uma pena. Obviamente um mito, mas a realidade é que os elfos são donos de grandiosa agilidade em seus movimentos, e por isso são praticamente os alvos mais chatos pra um arqueiro. +3 de modificador em Esquiva.\nAudição élfica: Existem caçadores de elfos por aí. Cheios de ódio por conta da distinção da raça. E qual distinção maior do que a orelha pontuda? Porém, aquela orelha pontuda ajuda a ouvir coisas que, naturalmente, outras raças não ouviriam. Como até mesmo o retesar de uma corda de arco, a metros e metros de distância. +3 de modificador em Percepção."
         },
-        "fadas": "Fadas",
+        "fadas": {
+            "nome": "Fadas",
+            "key": "fadas",
+            "diferencial": "Munhal: Viveram tanto tempo em uma dimensão mágica, que as fadas são naturalmente associadas a magia. O resultado disso é que as fadas tornaram-se naturalmente \"canais\" da energia da criação. Magias não são tão cansativas para elas como é para outras raças. -20% no Custo de magias.\nAlinhamento Fádico: Ambos os tipos de fada podem voar e tem uma capacidade especial, porém, existe a distinção simples entre elas:\nFadas de luz têm asas de luz e voam através de impulsos naturais, quase que uma levitação; Podem ficar miúdas como uma mosca (+3 no modificador de Movimento Furtivo quando em sua Forma Mirim).Fadas das trevas possuem perigosos chifres, tão rígidos quanto aço, do qual sua perfuração pode matar (+3 no modificador de Intimidação); Tem asas de aspecto animalesco, com um voo mecânico."
+        },
         "anoes": "Anões",
         "submundanos": "Submundanos",
         "draconatos": "Draconatos",

@@ -17,11 +17,17 @@ data(){
             difRacial:'',
             atributos: {
                 agilidade:4,
+                bonusAgilidade: 0,
                 forca:4,
+                bonusForca:0,
                 destreza:4,
+                bonusDestreza:0,
                 carisma:4,
+                bonusCarisma:0,
                 resistencia:4,
+                bonusResistencia:0,
                 inteligencia:3,
+                bonusInteligencia:0,
                 atributosTotal:0
             },
         },
@@ -41,12 +47,24 @@ onChange(value){
             console.log(value)
             this.chardata.difRacial = this.info.racas[value].diferencial
             this.limiteAtributo = 23
+            this.chardata.atributos.bonusForca = 2
+            this.chardata.atributos.bonusDestreza = 1
             this.sumAttrib()
         break;
         case 'elfos':
             console.log(value)
             this.chardata.difRacial = this.info.racas[value].diferencial
             this.limiteAtributo = 23
+            this.chardata.atributos.bonusAgilidade = 2
+            this.chardata.atributos.bonusDestreza = 1
+            this.sumAttrib()
+        break;
+        case 'fadas':
+            console.log(value)
+            this.chardata.difRacial = this.info.racas[value].diferencial
+            this.limiteAtributo = 23
+            this.chardata.atributos.bonusInteligencia = 2
+            this.chardata.atributos.bonusCarisma = 1
             this.sumAttrib()
         break;
     }
@@ -68,7 +86,8 @@ watch:{
 computed: {
     limiteAtributos(){
         return this.chardata.atributos.atributosTotal > this.limiteAtributo
-    }
+    },
+    displaybonus(){}
 },
 
  async created(){
